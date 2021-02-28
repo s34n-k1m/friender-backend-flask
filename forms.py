@@ -17,16 +17,20 @@ class UserAddForm(FlaskForm):
     zip_code = StringField('Zip Code', validators=[InputRequired()])
     friend_radius_miles = StringField('Friend Radius', validators=[InputRequired()])
 
-# TODO: update this UserEditForm.
-# class UserEditForm(FlaskForm):
-#     """Form for editing users."""
 
-#     username = StringField('Username', validators=[InputRequired()])
-#     email = StringField('E-mail', validators=[InputRequired(), Email()])
-#     image_url = StringField('(Optional) Image URL')
-#     header_image_url = StringField('(Optional) Header Image URL')
-#     bio = TextAreaField('(Optional) Tell us about yourself')
-#     password = PasswordField('Password', validators=[Length(min=6)])
+class UserEditForm(FlaskForm):
+    """Form for editing users."""
+
+    image_url = StringField('(Optional) Image URL')
+    password = PasswordField('Password', validators=[Length(min=6)])
+    email = StringField('E-mail', validators=[InputRequired(), Email()])
+    first_name = StringField('First Name', validators=[InputRequired()])
+    last_name = StringField('Last Name', validators=[InputRequired()])
+    hobbies = StringField('Hobbies', validators=[InputRequired()])
+    interests = StringField('Interests', validators=[InputRequired()])
+    zip_code = StringField('Zip Code', validators=[InputRequired()])
+    friend_radius_miles = StringField('Friend Radius', validators=[InputRequired()])
+
 
 class LoginForm(FlaskForm):
     """Login form."""

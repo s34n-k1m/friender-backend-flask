@@ -2,12 +2,14 @@ import boto3
 import os
 from dotenv import load_dotenv
 load_dotenv()
-# from secret import S3_KEY, S3_SECRET, S3_BUCKET, S3_LOCATION
 S3_KEY = os.environ.get('S3_KEY')
 S3_SECRET = os.environ.get('S3_SECRET')
 S3_BUCKET = os.environ.get('S3_BUCKET')
 S3_LOCATION = os.environ.get('S3_LOCATION')
 
+##############################
+# THIS FILE IS NOT BEING USED
+##############################
 
 # Connect to AWS S3
 s3 = boto3.client(

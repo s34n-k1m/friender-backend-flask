@@ -11,6 +11,7 @@ MAPBOX_API_TOKEN=os.environ.get('MAPBOX_API_TOKEN')
 bcrypt = Bcrypt()
 db = SQLAlchemy()
 
+DEFAULT_IMAGE_URL = "https://sean-friender.s3-us-west-1.amazonaws.com/default-pic-uh123tkjbakjbvkj13btjbdskjbjk12gkj109.png"
 MAPBOX_API_BASE_URL = 'https://api.mapbox.com'
 
 
@@ -87,7 +88,7 @@ class User(db.Model):
 
     image_url = db.Column(
         db.Text,
-        default="/static/images/default-pic.png",
+        default=DEFAULT_IMAGE_URL,
     )
 
     hobbies = db.Column(
