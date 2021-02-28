@@ -6,12 +6,12 @@ from flask_sqlalchemy import SQLAlchemy
 import requests
 from geopy.distance import geodesic
 import os
-MAPBOX_API_TOKEN=os.environ.get('MAPBOX_API_TOKEN')
 
 bcrypt = Bcrypt()
 db = SQLAlchemy()
 
 DEFAULT_IMAGE_URL = "https://sean-friender.s3-us-west-1.amazonaws.com/default-pic-uh123tkjbakjbvkj13btjbdskjbjk12gkj109.png"
+MAPBOX_API_TOKEN = os.environ.get('MAPBOX_API_TOKEN')
 MAPBOX_API_BASE_URL = 'https://api.mapbox.com'
 
 
