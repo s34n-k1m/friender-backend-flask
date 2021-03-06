@@ -82,6 +82,7 @@ def do_login(user):
 
 
 @app.route('/signup', methods=["POST"])
+@cross_origin()
 def signup():
     """Handle user signup.
 
@@ -130,6 +131,7 @@ def signup():
 
 
 @app.route('/login', methods=["POST"])
+@cross_origin()
 def login():
     """Handle user login.
     Takes in JSON {username, password}
