@@ -8,7 +8,6 @@ from flask_cors import CORS, cross_origin
 
 from forms import UserAddForm, LoginForm, UserEditForm
 from models import db, connect_db, User, Like, Dislike
-# from helpers import upload_file_to_s3
 from werkzeug.utils import secure_filename
 from upload_functions import allowed_file, upload_file_obj, create_presigned_url
 from botocore.exceptions import ClientError

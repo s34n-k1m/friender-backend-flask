@@ -7,9 +7,9 @@ S3_SECRET = os.environ.get('S3_SECRET')
 S3_BUCKET = os.environ.get('S3_BUCKET')
 S3_LOCATION = os.environ.get('S3_LOCATION')
 
-##############################
-# THIS FILE IS NOT BEING USED
-##############################
+####################################
+# THIS FILE IS NO LONGER BEING USED
+####################################
 
 # Connect to AWS S3
 s3 = boto3.client(
