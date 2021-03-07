@@ -255,6 +255,8 @@ def user_edit(user_id):
             current_user.zip_code = form.zip_code.data,
             current_user.friend_radius_miles = form.friend_radius_miles.data
 
+            current_user.coordinates = User.get_coords(form.zip_code.data)
+
             # update image_url with uploaded file
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
