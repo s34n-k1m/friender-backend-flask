@@ -1,18 +1,17 @@
-# from werkzeug.utils import secure_filename
-# from flask import url_for
+
 import logging
 import boto3
 from botocore.exceptions import ClientError
 import os
 from dotenv import load_dotenv
 load_dotenv()
+
 S3_KEY = os.environ.get('S3_KEY')
 S3_SECRET = os.environ.get('S3_SECRET')
 S3_BUCKET = os.environ.get('S3_BUCKET')
 S3_LOCATION = os.environ.get('S3_LOCATION')
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
-
 
 
 # Checks that file has allowed extension
@@ -52,9 +51,9 @@ def upload_file_obj(file_obj, bucket, object_name):
     return "{}{}".format(S3_LOCATION, object_name)
 
 
-##################################
-# Not using the following function
-##################################
+#####################################################################
+# Not using the following function, but keeping in case need it later
+#####################################################################
 def create_presigned_url(bucket_name, object_name, expiration=None):
     """Generate a presigned URL to share an S3 object
 
