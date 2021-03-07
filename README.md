@@ -4,7 +4,7 @@ Friender is an app that helps people make friends and connect with others based 
 
 Frontend and backend repositories were split for deployment. The frontend repository can be found [here](https://github.com/s34n-k1m/friender-frontend-react).
 
-Deployed [demo](https://friender.demo.seanmkim.com/) can be seen here.
+Deployed demo can be seen [here](https://friender.demo.seanmkim.com/).
 
 * Backend built with:
     * Flask
